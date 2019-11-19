@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pkm-ux-x0e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="IbV-rC-6QR">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKz-8V-Rsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="NavigationControllerID" id="Pkm-ux-x0e" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MSM-2U-V80">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hRP-zv-r5i" kind="relationship" relationship="rootViewController" id="0yj-b1-8Rk"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-912" y="-80"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="WCJ-d3-9cQ">
+            <objects>
+                <viewController storyboardIdentifier="PostListViewControllerID" id="hRP-zv-r5i" customClass="PostListViewController" customModule="ViperTestModify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ey2-xW-9hV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Sn-QY-2LB">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PostInfoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostListCellReuseID" rowHeight="104" id="Flr-4i-4hq" customClass="PostTableViewCell" customModule="ViperTestModify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Flr-4i-4hq" id="N3A-xM-wb5">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="werewr" text="PostTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnp-nS-lSS">
+                                                    <rect key="frame" x="20" y="11" width="334" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextOfPost" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt5-PJ-ZCv" userLabel="PostContent">
+                                                    <rect key="frame" x="20" y="43" width="334" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="trailing" secondItem="N3A-xM-wb5" secondAttribute="trailing" constant="-20" id="DEl-2I-JYS"/>
+                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="top" secondItem="Dnp-nS-lSS" secondAttribute="bottom" constant="8" symbolic="YES" id="KNF-Ka-m9a"/>
+                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="trailing" secondItem="N3A-xM-wb5" secondAttribute="trailing" constant="-20" id="Y1i-Jh-3n9"/>
+                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="top" secondItem="N3A-xM-wb5" secondAttribute="top" constant="11" id="enZ-Xi-72t"/>
+                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="leading" secondItem="N3A-xM-wb5" secondAttribute="leading" constant="20" id="lV7-Jv-3Ir"/>
+                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="N3A-xM-wb5" secondAttribute="bottom" id="lqa-jq-TgJ"/>
+                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="leading" secondItem="N3A-xM-wb5" secondAttribute="leading" constant="20" id="xAq-jB-cky"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postTextUILabel" destination="lt5-PJ-ZCv" id="OVi-cc-8mX"/>
+                                            <outlet property="postTitleUILabel" destination="Dnp-nS-lSS" id="q04-qN-SAP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0Sn-QY-2LB" firstAttribute="top" secondItem="ii0-oC-aIy" secondAttribute="top" id="6Ti-uu-G27"/>
+                            <constraint firstItem="ii0-oC-aIy" firstAttribute="trailing" secondItem="0Sn-QY-2LB" secondAttribute="trailing" constant="20" id="H93-HI-oEn"/>
+                            <constraint firstItem="0Sn-QY-2LB" firstAttribute="leading" secondItem="ii0-oC-aIy" secondAttribute="leading" constant="20" id="QmC-v0-nBO"/>
+                            <constraint firstItem="0Sn-QY-2LB" firstAttribute="bottom" secondItem="ii0-oC-aIy" secondAttribute="bottom" id="niQ-fA-umS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ii0-oC-aIy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="9ea-gB-Q9c">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="a5Q-24-KsR">
+                            <connections>
+                                <action selector="onPushAddPostButton:" destination="hRP-zv-r5i" id="Vau-Ph-6Q1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0Sn-QY-2LB" id="7gQ-qE-6d5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2E-Uh-zNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="-80.357142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
