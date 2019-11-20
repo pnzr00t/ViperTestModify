@@ -43,7 +43,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" restorationIdentifier="werewr" text="PostTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnp-nS-lSS" userLabel="PostTitleLabel">
-                                                    <rect key="frame" x="20" y="11.5" width="334" height="24"/>
+                                                    <rect key="frame" x="20" y="12" width="334" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="bOo-it-ltt"/>
                                                     </constraints>
@@ -52,7 +52,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextOfPost" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt5-PJ-ZCv" userLabel="PostContentLabel">
-                                                    <rect key="frame" x="20" y="43.5" width="334" height="80.5"/>
+                                                    <rect key="frame" x="20" y="44" width="334" height="80"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                                 <constraint firstItem="lt5-PJ-ZCv" firstAttribute="leading" secondItem="N3A-xM-wb5" secondAttribute="leading" constant="20" id="Tmu-e3-WNE"/>
                                                 <constraint firstAttribute="bottom" secondItem="lt5-PJ-ZCv" secondAttribute="bottom" priority="999" id="c3S-ep-mSG"/>
                                                 <constraint firstItem="Dnp-nS-lSS" firstAttribute="leading" secondItem="N3A-xM-wb5" secondAttribute="leading" constant="20" id="vmb-4Y-lqb"/>
-                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="top" secondItem="N3A-xM-wb5" secondAttribute="top" constant="11.5" id="yYS-AY-4bb"/>
+                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="top" secondItem="N3A-xM-wb5" secondAttribute="top" constant="12" id="yYS-AY-4bb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
