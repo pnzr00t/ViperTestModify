@@ -16,6 +16,7 @@ class PostTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //self.contentView.autoresizingMask = .flexibleHeight
         // Initialization code
     }
 

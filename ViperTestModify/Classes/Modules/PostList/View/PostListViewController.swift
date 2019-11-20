@@ -24,13 +24,14 @@ class PostListViewController: UIViewController {
         
         print(#function);
         self.title = "Post List"
+
+        self.tableView.estimatedRowHeight = 200
+        self.tableView.rowHeight = UITableView.automaticDimension
+
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.definesPresentationContext = true
-        
-        self.tableView.estimatedRowHeight = 80
-        self.tableView.rowHeight = UITableView.automaticDimension
+        self.definesPresentationContext = true        
         
         output.viewIsReady()
     }
@@ -126,6 +127,10 @@ extension PostListViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
 
 
@@ -164,5 +169,6 @@ extension PostListViewController: UIAdaptivePresentationControllerDelegate {
         #endif
         
         self.output.updateTable() // Update table (not optimal varint of usage, but simple for study purposal)
+        //1
     }
 }
