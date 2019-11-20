@@ -169,5 +169,6 @@ extension PostListViewController: UIAdaptivePresentationControllerDelegate {
         #endif
         
         self.output.updateTable() // Update table (not optimal varint of usage, but simple for study purposal)
+        //1
     }
 }
