@@ -10,7 +10,6 @@
         <!--Navigation Controller-->
         <scene sceneID="IbV-rC-6QR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iKz-8V-Rsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="NavigationControllerID" id="Pkm-ux-x0e" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MSM-2U-V80">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -20,6 +19,7 @@
                         <segue destination="hRP-zv-r5i" kind="relationship" relationship="rootViewController" id="0yj-b1-8Rk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKz-8V-Rsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-912" y="-80"/>
         </scene>
@@ -35,34 +35,37 @@
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PostInfoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostListCellReuseID" rowHeight="104" id="Flr-4i-4hq" customClass="PostTableViewCell" customModule="ViperTestModify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="104"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PostInfoCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostListCellReuseID" rowHeight="124" id="Flr-4i-4hq" customClass="PostTableViewCell" customModule="ViperTestModify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Flr-4i-4hq" id="N3A-xM-wb5">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="104"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="werewr" text="PostTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnp-nS-lSS">
-                                                    <rect key="frame" x="20" y="11" width="334" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" restorationIdentifier="werewr" text="PostTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnp-nS-lSS" userLabel="PostTitleLabel">
+                                                    <rect key="frame" x="20" y="11.5" width="334" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="bOo-it-ltt"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextOfPost" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt5-PJ-ZCv" userLabel="PostContent">
-                                                    <rect key="frame" x="20" y="43" width="334" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextOfPost" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt5-PJ-ZCv" userLabel="PostContentLabel">
+                                                    <rect key="frame" x="20" y="43.5" width="334" height="80.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="trailing" secondItem="N3A-xM-wb5" secondAttribute="trailing" constant="-20" id="DEl-2I-JYS"/>
-                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="top" secondItem="Dnp-nS-lSS" secondAttribute="bottom" constant="8" symbolic="YES" id="KNF-Ka-m9a"/>
-                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="trailing" secondItem="N3A-xM-wb5" secondAttribute="trailing" constant="-20" id="Y1i-Jh-3n9"/>
-                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="top" secondItem="N3A-xM-wb5" secondAttribute="top" constant="11" id="enZ-Xi-72t"/>
-                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="leading" secondItem="N3A-xM-wb5" secondAttribute="leading" constant="20" id="lV7-Jv-3Ir"/>
-                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="N3A-xM-wb5" secondAttribute="bottom" id="lqa-jq-TgJ"/>
-                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="leading" secondItem="N3A-xM-wb5" secondAttribute="leading" constant="20" id="xAq-jB-cky"/>
+                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="top" secondItem="Dnp-nS-lSS" secondAttribute="bottom" constant="8" symbolic="YES" id="BpN-cz-cwg"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dnp-nS-lSS" secondAttribute="trailingMargin" constant="28" id="Buw-nG-4T4"/>
+                                                <constraint firstAttribute="trailing" secondItem="lt5-PJ-ZCv" secondAttribute="trailing" constant="20" id="M2Q-Q3-YJS"/>
+                                                <constraint firstItem="lt5-PJ-ZCv" firstAttribute="leading" secondItem="N3A-xM-wb5" secondAttribute="leading" constant="20" id="Tmu-e3-WNE"/>
+                                                <constraint firstAttribute="bottom" secondItem="lt5-PJ-ZCv" secondAttribute="bottom" priority="999" id="c3S-ep-mSG"/>
+                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="leading" secondItem="N3A-xM-wb5" secondAttribute="leading" constant="20" id="vmb-4Y-lqb"/>
+                                                <constraint firstItem="Dnp-nS-lSS" firstAttribute="top" secondItem="N3A-xM-wb5" secondAttribute="top" constant="11.5" id="yYS-AY-4bb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
